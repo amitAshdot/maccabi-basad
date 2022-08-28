@@ -1,3 +1,24 @@
+.logo {
+    position: absolute;
+    margin-block-start: auto;
+    right: 1rem;
+    top: 1rem;
+
+    @include respond(tab-port) {
+        position: absolute;
+        margin-block-start: -5rem;
+        right: 1rem;
+        top: 1rem;
+        z-index: 1;
+        background: white;
+        border-radius: 50%;
+        height: 25rem;
+        width: 25rem;
+        padding: 4rem;
+        object-fit: contain;
+    }
+}
+
 .cta {
     &-section {
         position: relative;
@@ -16,9 +37,10 @@
         margin: auto;
         // margin-top: -6rem;
 
-        @include respond(mini-desktop) {
-            padding-inline-start: 5rem;
-            padding-inline-end: 5rem;
+        @include respond(tab-port) {
+            gap: 40rem;
+            padding-inline-start: 3rem;
+            padding-inline-end: 3rem;
             padding-block-end: 5rem;
         }
     }
@@ -38,6 +60,11 @@
             // color: $color-primary;
             color: $color-white;
             // margin-top: 2.5rem;
+
+            @include respond(tab-port) {
+                font-size: 4.5rem;
+                line-height: 4rem;
+            }
         }
 
         .details {
@@ -47,6 +74,11 @@
             // color: $color-secondary;
             color: $color-white;
             margin-top: 30px;
+
+            @include respond(tab-port) {
+                font-size: 10rem;
+                line-height: 9rem;
+            }
         }
 
         #maccabi {
@@ -55,6 +87,11 @@
             // color: $color-primary;
             color: $color-white;
             line-height: 8rem;
+
+            @include respond(tab-port) {
+                font-size: 25rem;
+                line-height: 24rem;
+            }
         }
     }
 
@@ -74,6 +111,11 @@
             width: 56%;
             margin: auto;
             padding-top: 7rem;
+
+            @include respond(mini-desktop) {
+                width: 80%;
+                padding-top: 8rem;
+            }
         }
     }
 
@@ -93,7 +135,7 @@
             width: 100%;
             height: 3.2rem;
             border-radius: 31px;
-            height: 7.5rem;
+            height: 12.5rem;
             padding-inline-start: 3rem;
             padding-inline-end: 3rem;
             margin-block-start: 2rem;
@@ -145,11 +187,10 @@
 
 
         @include respond(mini-desktop) {
-            font-size: 3.9rem;
+            font-size: 6rem;
             width: 100%;
-            height: 3.2rem;
+            height: 12.5rem;
             border-radius: 31px;
-            height: 7.5rem;
             padding-inline-start: 3rem;
             padding-inline-end: 3rem;
             margin-block-start: 2rem;
@@ -204,6 +245,14 @@
         border-top-right-radius: 50% 40%;
         border-bottom-left-radius: 30% 40%;
         border-bottom-right-radius: 70% 60%;
+
+        @include respond(tab-port) {
+            width: 90rem;
+            height: 85rem;
+            margin-top: -13rem;
+            padding-block-start: 15rem;
+            border-bottom-right-radius: 70% 40%;
+        }
     }
 
     &-bottom {
@@ -213,5 +262,18 @@
         border-bottom-right-radius: 30% 60%;
         border-bottom-left-radius: 70% 40%;
 
+        @include respond(tab-port) {
+            margin-inline-start: 0rem;
+            width: 94vw;
+            height: 47vh;
+            border-top-left-radius: 5% 5%;
+            border-top-right-radius: 5% 5%;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+
+            // background-image: linear-gradient(19deg, $color-primary 0%, $color-secondary 100%);
+            background-image: linear-gradient(19deg, #08428f 0%, #26abe1de 100%);
+            box-shadow: none;
+        }
     }
 }

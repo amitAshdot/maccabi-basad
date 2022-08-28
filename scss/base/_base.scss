@@ -80,6 +80,8 @@ body {
 
   background-image: url(../images/back.jpeg);
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   @include respond(tab-port) {
     // padding: 0;
