@@ -56,20 +56,14 @@
             <form class="cta-form show-on-scroll" id="form" method="post">
                 <div class=" cta-form-inputs">
 
-                    <input type="text" class="cta-input" placeholder="שם מלא" name="name" id="name">
+                    <input type="text" class="cta-input" placeholder="שם פרטי" name="name" id="name">
+                    <input type="text" class="cta-input" placeholder="שם משפחה" name="name" id="name">
                     <input type="tel" class="cta-input" placeholder="טלפון" name="phone" id="phone">
-                    <input type="text" class="cta-input" placeholder="אימייל" name="email" id="email">
-                    <input type="text" class="cta-input" placeholder="תחום עיסוק" name="buss" id="buss">
-                    <select class="cta-input select" name="area" id="area">
-                        <!-- <optgroup label="איזור השרון"> -->
-                        <option value="">בחר/י איזור</option>
-                        <option value="volvo">צפון</option>
-                        <option value="saab">מרכז</option>
-                        <option value="mercedes">דרום</option>
-                        <!-- </optgroup> -->
-                        <!-- <optgroup label="איזור הבקעה"> -->
-                        <!-- </optgroup> -->
+                    <!-- <input type="text" class="cta-input" placeholder="אימייל" name="email" id="email"> -->
+                    <select class="cta-input select" name="time" id="time">
+                        <option value="">שעת חזרה רצויה</option>
                     </select>
+                    <input type="text" class="cta-input" placeholder="יישוב" name="city" id="city">
                     <button type="submit" class="cta-submit btn">חזרו אליי</button>
                 </div>
             </form>
@@ -106,6 +100,20 @@
 
             });
         });
+    </script>
+
+    <script>
+        let timeList = [
+            '09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00',
+            '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30'
+        ]
+        let selectTime = document.getElementById('time');
+        for (let i = 0; i < timeList.length; i++) {
+            let option = document.createElement("option");
+            option.value = timeList[i];
+            option.text = timeList[i];
+            selectTime.add(option);
+        }
     </script>
 </body>
 
