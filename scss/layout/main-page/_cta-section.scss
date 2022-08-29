@@ -53,7 +53,7 @@
             gap: 40rem;
             padding-inline-start: 3rem;
             padding-inline-end: 3rem;
-            padding-block-end: 5rem;
+            padding-block-end: 0rem;
         }
     }
 
@@ -116,6 +116,10 @@
         // border-inline-start: 0.5rem solid $color-primary;
         // max-width: 1170px;
 
+        @include respond(tab-port) {
+            padding-block-end: 5rem;
+        }
+
         &-inputs {
             display: flex;
             justify-content: start;
@@ -124,8 +128,9 @@
             width: 75%;
             margin: auto;
             padding-top: 7rem;
+            justify-content: space-evenly;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 width: 80%;
                 padding-top: 8rem;
             }
@@ -143,12 +148,12 @@
         border: 2px solid $color-black;
         background: white;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             font-size: 3.9rem;
             width: 100%;
             height: 3.2rem;
             border-radius: 31px;
-            height: 12.5rem;
+            height: 10rem;
             padding-inline-start: 3rem;
             padding-inline-end: 3rem;
             margin-block-start: 2rem;
@@ -156,7 +161,7 @@
 
         &:first-child {
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 margin-block-start: 0rem;
             }
         }
@@ -164,7 +169,7 @@
         &:nth-child(n+3) {
             margin-block-start: 1rem;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 margin-block-start: 2rem;
             }
         }
@@ -199,10 +204,10 @@
         background-color: $color-primary;
 
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             font-size: 6rem;
             width: 100%;
-            height: 12.5rem;
+            height: 10rem;
             border-radius: 31px;
             padding-inline-start: 3rem;
             padding-inline-end: 3rem;
@@ -219,7 +224,7 @@
 
         transition: all 0.3s;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             font-size: 3.9rem;
             width: 100%;
             margin-block-start: 2rem;
@@ -278,7 +283,7 @@
         @include respond(tab-port) {
             margin-inline-start: 0rem;
             width: 94vw;
-            height: 50vh;
+            height: auto;
             border-top-left-radius: 5% 5%;
             border-top-right-radius: 5% 5%;
             border-bottom-right-radius: 0;
