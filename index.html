@@ -51,13 +51,16 @@
                 <p id="maccabi">מכבי</p>
             </div>
         </div>
-
+        <!-- <iframe width="700" height="400"
+            src="https://data.gov.il/dataset/citiesandsettelments/resource/5c78e9fa-c2e2-4771-93ff-7f400a12f7ba/view/142a018b-c8f8-4f79-b922-891245e23835"
+            frameBorder="0"></iframe> -->
         <div class="box box-bottom">
             <form class="cta-form show-on-scroll" id="form" method="post">
                 <div class=" cta-form-inputs">
 
                     <input type="text" class="cta-input" placeholder="שם פרטי" name="name" id="name">
                     <input type="text" class="cta-input" placeholder="שם משפחה" name="name" id="name">
+                    <input type="tel" class="cta-input" placeholder="תעודת זהות" name="name" id="name">
                     <input type="tel" class="cta-input" placeholder="טלפון" name="phone" id="phone">
                     <!-- <input type="text" class="cta-input" placeholder="אימייל" name="email" id="email"> -->
                     <select class="cta-input select" name="time" id="time">
@@ -114,6 +117,26 @@
             option.text = timeList[i];
             selectTime.add(option);
         }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var data = {
+                resource_id: '5c78e9fa-c2e2-4771-93ff-7f400a12f7ba', // the resource id
+                limit: 5, // get 5 results
+                q: 'jones' // query for 'jones'
+            };
+            $.ajax({
+                url: 'https://data.gov.il/api/3/action/datastore_search',
+                data: data,
+                dataType: 'jsonp',
+                success: function (data) {
+                    console.log(data)
+                    alert('Total results found: ' + data.result.total)
+                }
+            });
+        })
     </script>
 </body>
 
