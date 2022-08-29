@@ -108,7 +108,7 @@
             justify-content: start;
             flex-wrap: wrap;
             align-items: center;
-            width: 56%;
+            width: 75%;
             margin: auto;
             padding-top: 7rem;
 
@@ -121,7 +121,7 @@
 
     &-input {
         font-size: 0.9rem;
-        width: 12rem;
+        width: 18rem;
         height: 3.2rem;
         padding-inline-start: 1rem;
         padding-inline-end: 1rem;
@@ -177,7 +177,7 @@
 
     &-submit {
         @include global-btn($color-white, $color-primary, $color-black);
-        width: 12rem;
+        width: 18rem;
         height: 3.2rem;
         margin-block-start: 1rem;
         // margin-inline-start: auto;
