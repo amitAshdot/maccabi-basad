@@ -1,3 +1,29 @@
+@keyframes changingBorderRadius {
+  0% {
+    border-radius: 30% 50% 20% 50%;
+  }
+
+  25% {
+    border-radius: 50% 25% 50% 40%;
+  }
+
+  50% {
+    border-radius: 45% 60% 25% 30%;
+  }
+
+  // 50% {
+  //   border-radius: 45% 30% 25% 30%;
+  // }
+
+  75% {
+    border-radius: 50% 30% 50% 20%;
+  }
+
+  100% {
+    border-radius: 30% 50% 20% 50%;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
