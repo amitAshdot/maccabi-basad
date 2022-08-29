@@ -1,26 +1,26 @@
 @font-face {
-  font-family: 'adoveFnt22';
-  src: url(https://amitashdot.github.io/targetCall-landing/fonts/ploni-regular-aaa.otf);
+  font-family: 'complet';
+  src: url(../fonts/completregular.woff);
   font-display: swap;
 
 }
 
 @font-face {
-  font-family: 'adoveFnt22-bold';
-  src: url(https://amitashdot.github.io/targetCall-landing//fonts/ploni-bold-aaa.otf);
+  font-family: 'complet-bold';
+  src: url(../fonts/completbold.woff);
   font-display: swap;
 
 }
 
 // @font-face {
-//   font-family: 'adoveFnt22-ultrabold';
+//   font-family: 'complet-ultrabold';
 //   src: url(https://amitashdot.github.io/targetCall-landing//fonts/ploni-ultrabold-aaa.otf);
 //   font-display: swap;
 
 // }
 
 body {
-  font-family: 'adoveFnt22', sans-serif;
+  font-family: 'complet', sans-serif;
   font-weight: 400;
   font-size: $defaut-font-size;
   line-height: 1.7;
@@ -64,7 +64,7 @@ h3 {
 }
 
 p strong {
-  font-family: "adoveFnt22", sans-serif;
+  font-family: "complet", sans-serif;
 }
 
 p {
