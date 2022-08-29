@@ -66,22 +66,30 @@
         // margin-block-start: 2rem;
 
         #basad {
-            color: $color-white;
             font-size: 2.5rem;
-            line-height: 2rem
+            line-height: 2rem;
+            font-weight: bold;
+            // color: $color-primary;
+            color: $color-white;
+            // margin-top: 2.5rem;
+
+            @include respond(tab-port) {
+                font-size: 4.5rem;
+                line-height: 4rem;
+            }
         }
 
         .details {
             font-size: 4rem;
             font-weight: bold;
-            line-height: 5rem;
+            line-height: 3rem;
             // color: $color-secondary;
             color: $color-white;
             margin-top: 30px;
 
             @include respond(tab-port) {
                 font-size: 10rem;
-                line-height: 11rem;
+                line-height: 9rem;
             }
         }
 
@@ -91,11 +99,11 @@
             font-weight: bold;
             // color: $color-primary;
             color: $color-white;
-            line-height: 9rem;
+            line-height: 8rem;
 
             @include respond(tab-port) {
                 font-size: 25rem;
-                line-height: 26rem;
+                line-height: 24rem;
             }
         }
     }
@@ -266,8 +274,8 @@
     box-shadow: 10px -1px 0px 10px #08428f69;
 
     &-top {
-        width: 550px;
-        height: 400px;
+        width: 30.7rem;
+        height: 22.35rem;
         border-start-start-radius: 50% 40%;
         border-start-end-radius: 30% 60%;
         border-end-start-radius: 70% 60%;
