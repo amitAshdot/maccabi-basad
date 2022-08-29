@@ -132,10 +132,23 @@ document.addEventListener("DOMContentLoaded", function () {
         return flag ? false : true;
     }
     const submitForm = (e) => {
+        e.preventDefault();
         if (validateForm()) {
+            var data = $(this).serialize();
+            if (validateForm()) {
+                $.ajax({
+                    type: "POST",
+                    url: './mail.php',
+                    data: data,
+                    success: function (mail) {
+                        alert('הפרטים נשלחו בהצלחה');
+                        // window.location.href = 'thankyou.html';
+                    }
+                });
+            }
+
             return true
         } else {
-            e.preventDefault();
             return false
         }
     }
