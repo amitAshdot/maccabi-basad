@@ -91,15 +91,17 @@
             $('#form').submit(function (e) {
                 e.preventDefault();
                 var data = $(this).serialize();
-                $.ajax({
-                    type: "POST",
-                    url: './mail.php',
-                    data: data,
-                    success: function (mail) {
-                        alert('הפרטים נשלחו בהצלחה');
-                        // window.location.href = 'thankyou.html';
-                    }
-                });
+                if (validateForm()) {
+                    $.ajax({
+                        type: "POST",
+                        url: './mail.php',
+                        data: data,
+                        success: function (mail) {
+                            alert('הפרטים נשלחו בהצלחה');
+                            // window.location.href = 'thankyou.html';
+                        }
+                    });
+                }
 
             });
         });
@@ -117,26 +119,6 @@
             option.text = timeList[i];
             selectTime.add(option);
         }
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            var data = {
-                resource_id: '5c78e9fa-c2e2-4771-93ff-7f400a12f7ba', // the resource id
-                limit: 5, // get 5 results
-                q: 'jones' // query for 'jones'
-            };
-            $.ajax({
-                url: 'https://data.gov.il/api/3/action/datastore_search',
-                data: data,
-                dataType: 'jsonp',
-                success: function (data) {
-                    console.log(data)
-                    alert('Total results found: ' + data.result.total)
-                }
-            });
-        })
     </script>
 </body>
 

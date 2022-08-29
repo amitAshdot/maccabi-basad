@@ -97,27 +97,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const validateForm = () => {
-        let flag = false, name = document.getElementById("name"), email = document.getElementById("email"),
-            phone = document.getElementById("phone"), buss = document.getElementById("buss"),
-            area = document.getElementById("area"), message = document.getElementById("message");
-        if (name.value.length < 2) {
-            name.classList.add("error");
+        let flag = false, Fname = document.getElementById("Fname"), Sname = document.getElementById("Sname")
+        id = document.getElementById("id"),
+            phone = document.getElementById("phone"), time = document.getElementById("time"),
+            city = document.getElementById("city"), message = document.getElementById("message");
+        if (Fname.value.length < 2) {
+            Fname.classList.add("error");
             flag = true;
         }
-        if (validateEmail(email.value) === false) {
-            email.classList.add("error");
+        if (Sname.value.length < 2) {
+            Sname.classList.add("error");
+            flag = true;
+        }
+        if (validateEmail(id.value) === false) {
+            id.classList.add("error");
             flag = true;
         }
         if (validatePhone(phone.value) === false) {
             phone.classList.add("error");
             flag = true;
         }
-        if (buss.value === "") {
-            buss.classList.add("error");
+        if (time.value === "") {
+            time.classList.add("error");
             flag = true;
         }
-        if (area.value === "") {
-            area.classList.add("error");
+        if (city.value === "") {
+            city.classList.add("error");
             flag = true;
         }
         if (flag) {
