@@ -26,13 +26,13 @@
 .side-image {
     position: absolute;
     display: block;
-    width: 59vw;
+    width: 59rem;
     height: auto;
     overflow: visible;
 
     @include respond(tab-port) {
         position: relative;
-        width: 90vw;
+        width: 90rem;
         margin-block-start: 5rem;
     }
 }
@@ -43,7 +43,7 @@
         // border: 1px solid blue;
         max-width: 1920px;
         margin: auto;
-        width: 45vw;
+        width: 45rem;
         margin-inline-end: 0;
         margin-block-start: 14rem;
         margin-block-end: 4rem;
@@ -121,7 +121,7 @@
             justify-content: start;
             flex-wrap: wrap;
             align-items: center;
-            width: 37vw;
+            width: 37rem;
             margin: auto;
             padding-top: 2rem;
             justify-content: space-evenly;
