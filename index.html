@@ -32,39 +32,60 @@
 
 <body>
     <!-- TOP SECTION START-->
-    <section class="top-section" id="header" aria-label="top-section">
-        <img class="logo" src="images/logo-small.webp" alt="לוגו" title="לוגו" width="110" height="42" load="lazy">
-    </section>
+    <div class="logo-container" id="logo-container" aria-label="logo-container">
+        <img class="logo" src="images/logo.webp" alt="לוגו" title="לוגו" width="110" height="42" load="lazy">
+    </div>
     <!-- TOP SECTION END-->
+
+    <!-- MOBILE TEXT START-->
+    <div class="cta-text u-mobile">
+        <!-- <p id="basad">בס"ד</p> -->
+        <p class="details">
+            כן,
+            אני רוצה לקבל<br>
+            פרטים על
+            מכבי
+        </p>
+        <!-- <p id="maccabi">מכבי</p> -->
+    </div>
+    <!-- MOBILE TEXT END-->
+
+    <!-- SIDE IMAGE SECTION START-->
+    <picture>
+        <source media="(max-width: 1025px)" srcset="./images/basad-mob.webp" defer width="1056" height="1056">
+        <img defer src="./images/basad-web.webp" alt="סיבים בצבע כחול" class="side-image" width="1056"
+            height="1017.380" />
+    </picture>
+    <!-- SIDE IMAGE SECTION END-->
 
     <!-- CTA SECTION START-->
     <section class="cta-section" id="cta" aria-label="cta-section">
-        <div class="box box-top">
-            <div class="cta-text">
-                <p id="basad">בס"ד</p>
-                <p class="details">
-                    כן!<br>
-                    אני רוצה לקבל<br>
-                    יותר פרטים על
-                </p>
-                <p id="maccabi">מכבי</p>
-            </div>
+        <div class="cta-text u-desktop">
+            <!-- <p id="basad">בס"ד</p> -->
+            <p class="details">
+                כן,
+                אני רוצה לקבל<br>
+                יותר פרטים על
+                מכבי
+            </p>
+            <!-- <p id="maccabi">מכבי</p> -->
         </div>
 
         <p id="message" class="cta-message error"></p>
         <div class="box box-bottom">
             <form class="cta-form show-on-scroll" id="form" method="post">
-                <div class=" cta-form-inputs">
-
-                    <input type="text" class="cta-input" placeholder="שם פרטי" name="Fname" id="Fname">
-                    <input type="text" class="cta-input" placeholder="שם משפחה" name="Sname" id="Sname">
-                    <input type="tel" class="cta-input" placeholder="תעודת זהות" name="id" id="id">
+                <div class="cta-form-inputs">
+                    <div class="cta-form-inputs__name">
+                        <input type="text" class="cta-input" placeholder="שם פרטי" name="Fname" id="Fname">
+                        <input type="text" class="cta-input" placeholder="שם משפחה" name="Sname" id="Sname">
+                    </div>
                     <input type="tel" class="cta-input" placeholder="טלפון" name="phone" id="phone">
+                    <input type="tel" class="cta-input" placeholder="תעודת זהות" name="id" id="id">
                     <!-- <input type="text" class="cta-input" placeholder="אימייל" name="email" id="email"> -->
+                    <input type="text" class="cta-input" placeholder="יישוב" name="city" id="city">
                     <select class="cta-input select" name="time" id="time">
                         <option value="">שעת חזרה רצויה</option>
                     </select>
-                    <input type="text" class="cta-input" placeholder="יישוב" name="city" id="city">
                     <button type="submit" class="cta-submit btn">חזרו אליי</button>
                 </div>
             </form>
