@@ -76,6 +76,22 @@ document.addEventListener("DOMContentLoaded", function () {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
+    const validateId = (id) => {
+        let strId = String(id).trim();
+        if (strId.length > 9 || strId < 4) {
+            return false;
+        }
+        if (strId.length < 9) {
+            while (strId.length < 9) strId = "0" + strId;
+        }
+        let counter = 0, rawVal, actualVal;
+        for (let i = 0; i < strId.length; i++) {
+            rawVal = Number(strId[i]) * ((i % 2) + 1);
+            actualVal = rawVal > 9 ? (rawVal - 9) : rawVal;
+            counter += actualVal;
+        }
+        return (counter % 10 === 0);
+    }
 
     const validatePhone = (phone) => {
         // const re = /^[0-9]{10}$/;
@@ -89,6 +105,13 @@ document.addEventListener("DOMContentLoaded", function () {
         id = document.getElementById("id"),
             phone = document.getElementById("phone"), time = document.getElementById("time"),
             city = document.getElementById("city"), message = document.getElementById("message");
+        Fname.classList.remove("error");
+        Sname.classList.remove("error");
+        id.classList.remove("error");
+        phone.classList.remove("error");
+        time.classList.remove("error");
+        city.classList.remove("error");
+        message.classList.remove("error");
         if (Fname.value.length < 2) {
             Fname.classList.add("error");
             flag = true;
@@ -97,7 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
             Sname.classList.add("error");
             flag = true;
         }
-        if (validateEmail(id.value) === false) {
+
+        if (!validateId(id.value)) {
             id.classList.add("error");
             flag = true;
         }
