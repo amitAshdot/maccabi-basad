@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return re.test(String(email).toLowerCase());
     }
     const validateId = (id) => {
+        // with the help of https://github.com/atlanteh/israeli-id-validator
         let strId = String(id).trim();
         if (strId.length > 9 || strId < 4) {
             return false;
